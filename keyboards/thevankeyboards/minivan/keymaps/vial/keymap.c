@@ -24,22 +24,31 @@ void keyboard_post_init_user(void) {
 
 layer_state_t layer_state_set_user(layer_state_t state){
   #ifdef RGBLIGHT_ENABLE
-    // uint8_t led0r = 0; uint8_t led0g = 0; uint8_t led0b = 0;
-    // uint8_t led1r = 0; uint8_t led1g = 0; uint8_t led1b = 0;
+    uint8_t led1r = 0; uint8_t led1g = 0; uint8_t led1b = 0;
     uint8_t led2r = 0; uint8_t led2g = 0; uint8_t led2b = 0;
 
     if (layer_state_cmp(state, 1)) {
+      led1r = 255;
+      led1g = 255;
       led2r = 255;
-    }
-    if (layer_state_cmp(state, 2)) {
       led2g = 255;
     }
-    if (layer_state_cmp(state, 3)) {
+    if (layer_state_cmp(state, 2)) {
+      led1g = 255;
+      led1b = 255;
+      led2g = 255;
       led2b = 255;
     }
+    if (layer_state_cmp(state, 3)) {
+      led1b = 255;
+      led1r = 255;
+      led2b = 255;
+      led2r = 255;
+    }
 
+    setrgb(led1r, led1g, led1b, (LED_TYPE *)&led[1]);
     setrgb(led2r, led2g, led2b, (LED_TYPE *)&led[2]);
-    // setrgb(led1r, led1g, led1b, (LED_TYPE *)&led[1]);
+
     rgblight_set();
   #endif //RGBLIGHT_ENABLE
   return state;
