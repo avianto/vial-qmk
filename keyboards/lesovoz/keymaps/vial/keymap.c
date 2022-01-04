@@ -48,9 +48,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-layer_state_t layer_state_set_kb(layer_state_t state) {
-    writePinLow(LED1);
-    writePin(LED2, state);
+// layer_state_t layer_state_set_kb(layer_state_t state) {
+//     writePinLow(LED1);
+//     writePin(LED2, state);
 
-    return layer_state_set_user(state);
+//     return layer_state_set_user(state);
+// }
+
+//function for layer indicator LED
+layer_state_t layer_state_set_user(layer_state_t state) {
+    writePinLow(LED1);
+    writePinLow(LED2);
+    switch (get_highest_layer(state)) {
+        case 1:
+            writePinHigh(LED2);
+            break;
+        case 2:
+            writePinHigh(LED2);
+            break;
+        case 3:
+            writePinHigh(LED2);
+            break;
+        default:
+            writePinHigh(LED1);
+            break;
+    }
+    return state;
 }
