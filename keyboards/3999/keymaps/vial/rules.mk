@@ -4,3 +4,4 @@ VIA_ENABLE 				= yes
 VIAL_ENABLE 			= yes
 
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
+ENCODER_ENABLE = no
