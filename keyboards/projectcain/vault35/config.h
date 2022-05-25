@@ -17,8 +17,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID    0xFEED
-#define PRODUCT_ID   0x6060
+#define VENDOR_ID    0x4D46
+#define PRODUCT_ID   0x0011
 #define DEVICE_VER   0x0001
 #define MANUFACTURER projectcain
 #define PRODUCT      vault35
@@ -43,10 +43,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
-
-#define ENCODERS_PAD_A { D6 }
-#define ENCODERS_PAD_B { D7 }
-#define ENCODER_RESOLUTION 2
 
 /*
  * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.

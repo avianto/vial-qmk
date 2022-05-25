@@ -27,7 +27,33 @@
  * represents the switch matrix.
  */
 
-#define LAYOUT_split_4space( \
+#define LAYOUT_all( \
+    K000, K001, K002, K003, K004, K005, K006, K007, K008, K009, K010, \
+    K100, K101, K102, K103, K104, K105, K106, K107, K108, K109,       \
+    K200, K201, K202, K203, K204, K205, K206, K207, K208, K209,       \
+          K301, K302, K303, K304, K305, K306, K307  \
+) \
+{ \
+    { K000,  K001,  K002,  K003,  K004,  K005,  K006,  K007,  K008,  K009,  K010 }, \
+    { K100,  K101,  K102,  K103,  K104,  K105,  K106,  K107,  K108,  K109,  KC_NO }, \
+    { K200,  K201,  K202,  K203,  K204,  K205,  K206,  K207,  K208,  K209,  KC_NO }, \
+    { KC_NO, K301,  K302,  K303,  K304,  K305,  K306,  K307,  KC_NO, KC_NO, KC_NO }  \
+}
+
+#define LAYOUT_split_space1( \
+    K000, K001, K002, K003, K004, K005, K006, K007, K008, K009, K010, \
+    K100, K101, K102, K103, K104, K105, K106, K107, K108, K109,       \
+    K200, K201, K202, K203, K204, K205, K206, K207, K208, K209,       \
+          K301, K302,       K304,       K306, K307  \
+) \
+{ \
+    { K000,  K001,  K002,  K003,  K004,  K005,  K006,  K007,  K008,  K009,  K010 }, \
+    { K100,  K101,  K102,  K103,  K104,  K105,  K106,  K107,  K108,  K109,  KC_NO }, \
+    { K200,  K201,  K202,  K203,  K204,  K205,  K206,  K207,  K208,  K209,  KC_NO }, \
+    { KC_NO, K301,  K302,  KC_NO, K304,  KC_NO, K306,  K307,  KC_NO, KC_NO, KC_NO }  \
+}
+
+#define LAYOUT_split_space2( \
     K000, K001, K002, K003, K004, K005, K006, K007, K008, K009, K010, \
     K100, K101, K102, K103, K104, K105, K106, K107, K108, K109,       \
     K200, K201, K202, K203, K204, K205, K206, K207, K208, K209,       \
@@ -40,20 +66,20 @@
     { KC_NO, K301,  K302,  K303,  KC_NO, K305,  K306,  K307,  KC_NO, KC_NO, KC_NO }  \
 }
 
-#define LAYOUT_split_3space( \
+#define LAYOUT_split_space3( \
     K000, K001, K002, K003, K004, K005, K006, K007, K008, K009, K010, \
     K100, K101, K102, K103, K104, K105, K106, K107, K108, K109,       \
     K200, K201, K202, K203, K204, K205, K206, K207, K208, K209,       \
-          K301,       K303, K304, K305,       K307  \
+          K301, K302, K303,       K305, K306, K307  \
 ) \
 { \
     { K000,  K001,  K002,  K003,  K004,  K005,  K006,  K007,  K008,  K009,  K010 }, \
     { K100,  K101,  K102,  K103,  K104,  K105,  K106,  K107,  K108,  K109,  KC_NO }, \
     { K200,  K201,  K202,  K203,  K204,  K205,  K206,  K207,  K208,  K209,  KC_NO }, \
-    { KC_NO, K301,  KC_NO, K303,  K304,  K305,  KC_NO, K307,  KC_NO, KC_NO, KC_NO }  \
-}
+    { KC_NO, K301,  K302,  K303,  KC_NO, K305,  K306,  K307,  KC_NO, KC_NO, KC_NO }  \
+} 
 
-#define LAYOUT_split_2space( \
+#define LAYOUT_split_space4( \
     K000, K001, K002, K003, K004, K005, K006, K007, K008, K009, K010, \
     K100, K101, K102, K103, K104, K105, K106, K107, K108, K109,       \
     K200, K201, K202, K203, K204, K205, K206, K207, K208, K209,       \
@@ -66,15 +92,15 @@
     { KC_NO, K301,  KC_NO, K303,  KC_NO, K305,  KC_NO, K307,  KC_NO, KC_NO, KC_NO }  \
 }
 
-#define LAYOUT_full_space( \
+#define LAYOUT_split_space5( \
     K000, K001, K002, K003, K004, K005, K006, K007, K008, K009, K010, \
     K100, K101, K102, K103, K104, K105, K106, K107, K108, K109,       \
     K200, K201, K202, K203, K204, K205, K206, K207, K208, K209,       \
-          K301,             K304,             K307  \
+          K301,       K303,       K305,       K307  \
 ) \
 { \
     { K000,  K001,  K002,  K003,  K004,  K005,  K006,  K007,  K008,  K009,  K010 }, \
     { K100,  K101,  K102,  K103,  K104,  K105,  K106,  K107,  K108,  K109,  KC_NO }, \
     { K200,  K201,  K202,  K203,  K204,  K205,  K206,  K207,  K208,  K209,  KC_NO }, \
-    { KC_NO, K301,  KC_NO, KC_NO, K304,  KC_NO, KC_NO, K307,  KC_NO, KC_NO, KC_NO }  \
-} 
+    { KC_NO, K301,  KC_NO, K303,  KC_NO, K305,  KC_NO, K307,  KC_NO, KC_NO, KC_NO }  \
+}
