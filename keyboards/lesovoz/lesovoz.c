@@ -15,15 +15,4 @@
  */
 #include "lesovoz.h"
 
-// bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
-//     writePin(LED1, record->event.pressed);
-
-//     return process_record_user(keycode, record);
-// }
-
-// layer_state_t layer_state_set_kb(layer_state_t state) {
-//     writePinLow(LED1);
-//     writePin(LED2, state);
-
-//     return layer_state_set_user(state);
-// }
+// move the LED to keymap
