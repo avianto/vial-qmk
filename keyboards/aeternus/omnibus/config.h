@@ -40,13 +40,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define RGB_DI_PIN B7
 #ifdef RGB_DI_PIN
-#    define RGBLED_NUM 22
-#    define RGBLIGHT_ANIMATIONS
+#define RGBLED_NUM 22
+#define RGBLIGHT_ANIMATIONS
 #endif
 
 #define DEBOUNCE 5
 
 #define LOCKING_SUPPORT_ENABLE
 #define LOCKING_RESYNC_ENABLE
-#define NO_ACTION_MACRO
-#define NO_ACTION_FUNCTION
