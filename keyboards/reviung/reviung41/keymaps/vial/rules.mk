@@ -10,4 +10,5 @@ ifndef CONVERT_TO
 else
 	# Enable Mouse Keys when when not using a ProMicro as there will be space:
 	MOUSEKEY_ENABLE = yes
+	BOOTMAGIC_ENABLE = yes
 endif
