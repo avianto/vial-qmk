@@ -8,11 +8,6 @@
 #define VIAL_UNLOCK_COMBO_COLS { 0, 3 }
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0x0002
-#define PRODUCT_ID      0x0002
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    "Velocifire"
-#define PRODUCT         "Sun20pro"
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -21,11 +16,10 @@
 /* key matrix pins */
 #define MATRIX_ROW_PINS { B0, B1, B2, B3, B7 }
 #define MATRIX_COL_PINS { F7, F6, F5, F4 }
-#define ENCODERS_PAD_A { D6 }
-#define ENCODERS_PAD_B { D7 }
+#define ENCODER_A_PINS { D6 }
+#define ENCODER_B_PINS { D7 }
 
 /* COL2ROW or ROW2COL */
-#define DIODE_DIRECTION COL2ROW
 
 /* number of backlight levels */
 #ifdef BACKLIGHT_PIN
@@ -42,7 +36,6 @@
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #define RGB_MATRIX_KEYPRESSES
 
-#define WS2812_DI_PIN C7
 // RGB Matrix
 #   ifdef RGB_MATRIX_ENABLE
 #       define RGB_MATRIX_LED_COUNT 25
